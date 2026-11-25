@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://sa4qce1pj8gs"]
+
+[ext_resource type="Script" uid="uid://i07x7ubrhhll" path="res://void.gd" id="1_u8be3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_200mo"]
+size = Vector2(40517, 238.5)
+
+[node name="Void" type="Area2D" unique_id=2095346199]
+position = Vector2(24, 42)
+script = ExtResource("1_u8be3")
+
+[node name="Killzone" type="CollisionShape2D" parent="." unique_id=1347431436]
+position = Vector2(-516.5, 677.75)
+shape = SubResource("RectangleShape2D_200mo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
